@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Input from "../Common/input";
+import React, { useEffect, useRef, useState } from "react";
+import InputLogin from "../Common/inputlogin";
 import profile from "../../assets/profile.svg";
 import letter from "../../assets/letter.svg"
 import lock1 from "../../assets/lock1.svg"
@@ -11,38 +11,39 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 function Login() {
     const navigate = useNavigate();
-    let [Logged,setLogged]=useState(false)
-    const handleLogin = (e) => {
+    let passwordRef =useRef('')
+    let EmailRef=useRef('')
+    const handleLogin = (e:React.MouseEvent) => {
         e.preventDefault();
-        if (localStorage.getItem("Email") && localStorage.getItem("Password")) {
+        if (localStorage.getItem("Email") && localStorage.getItem("Password") &&  EmailRef.current && passwordRef.current) {
             let email: string | null = localStorage.getItem("Email");
             let password: string | null = localStorage.getItem("Password");
-            if (email.length >= 1 && password.length >= 8) {
+            if (email==EmailRef.current.value && password==passwordRef.current.value) {
                 localStorage.setItem("isLoggedIn", "true");
                 navigate('/MainPage', { replace: true });
             }
         }
     };
     useEffect(() => {
-        localStorage.removeItem("Email");
-        localStorage.removeItem("Password");
         if (localStorage.getItem("isLoggedIn")) {
             navigate('/MainPage', { replace: true });
-            setLogged(true)
         }
     })
+    function toSign() {
+            navigate('/', { replace: true });
+    }
     return (
     
         
             <div className="justify-items-center space-y-6">
-            <div className="space-y-2">
+            <div className="space-y-2 text-center">
                 <div className="text-red-600 text-3xl font-bold">Login</div>
                 <div className="font-semibold text-[20px]">Login To Continue</div>
             </div>
             <form className="space-y-8">
                 <div className="space-y-4">
-                    <Input type="email" img={letter} label="Email" placeholder="Enter Your Email" />
-                    <Input type="text" img1={lock1} img={lock} label="Password" placeholder="Enter Password" />
+                    <InputLogin ref={EmailRef}  type="email" img={letter} label="Email" placeholder="Enter Your Email" />
+                    <InputLogin ref={passwordRef} type="text" img1={lock1} img={lock} label="Password" placeholder="Enter Password" />
                 </div>
                 <button onClick={handleLogin} className="text-white hover:scale-110 transition ease-linear   cursor-pointer rounded-lg w-full pt-3 pb-3 text-[20px] bg-red-600 text-center content-center ">Login</button>
             </form>
@@ -55,6 +56,7 @@ function Login() {
                 <Icon img={google} text="Google" />
                 <Icon img={apple} text="Apple" />
             </div>
+            <p className="font-semibold text-center">Create New Account <span onClick={toSign} className="text-[#5e51d9]">Sign Up</span></p>
         </div>
     
 

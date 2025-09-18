@@ -1,0 +1,57 @@
+[
+    {
+        "img":"src/assets/image.jpg",
+        "head":"Time For Meds",
+        "work":"Read",
+        "main":"Don't Forget To Take Your Medications, Your Health Is Important To Us."
+    },
+    {
+        "img":"src/assets/image.jpg",
+        "head":"Hydration Reminder",
+        "work":"Unread",
+        "main":"Take A Moment To Sip Some Water. Staying Hydrated Is Key To Your Well-being."
+
+    },
+    {
+        "img":"src/assets/image.jpg",
+        "head":"A New Diet Plan For You!",
+        "work":"Threads",
+        "main":"Hey Moazan, We Have A New Diet Plan For You."
+    },
+    {
+        "img":"src/assets/image.jpg",
+        "head":"Nourish Your Body",
+        "work":"Read",
+        "main":"Its A Meal Time Fuel Your Body With A Nutrious Meal For A Healthier You."
+    },
+    {
+        "img":"src/assets/image.jpg",
+        "head":"Prescription Update",
+        "work":"Unead",
+        "main":"A New Prescription Awaits You. Log In To View The Details And Stay On Truck."
+    },
+    {
+        "img":"src/assets/image.jpg",
+        "head":"Lab Results Ready",
+        "work":"Threads",
+        "main":"Your Lab Reports Is In,Sign In To The App To View Your Latest Health Insights"
+    },
+    {
+        "img":"src/assets/image.jpg",
+        "head":"Password Updated",
+        "work":"Read",
+        "main":"Success! Your Password Has Been Changed. If This Wasn't Your,Reach Out To Us."
+    },
+    {
+        "img":"src/assets/image.jpg",
+        "head":"Upcoming Appointement",
+        "work":"Unread",
+        "main":"You Have A Scheduled Medical Appointment. Don't Forget To Mark Your Calendar."
+    },
+    {
+        "img":"src/assets/image.jpg",
+        "head":"Time To Move",
+        "work":"Threads",
+        "main":"Get Active ! Remember To Engage In Your Daily Exercise Routine For Healthier You."
+    }
+]   

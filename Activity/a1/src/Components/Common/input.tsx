@@ -3,12 +3,12 @@ interface types {
     img: string;
     placeholder: string;
     label: string;
-    star: string;
     type: string;
-    img1:string;
+    img1:string|null;
+    ref:HTMLInputElement;
 }
 
-const Input: React.FC<types> = ({  img, placeholder, label,img1, type}) => {
+const Input: React.FC<types> = ({  img, placeholder, label,img1, type,ref}) => {
     let [border,setBorder]=useState<string>("");
     let style: string = ` text-[#b8b8b8]  placeholder:text-[#b8b8b8]   h-[3rem] outline-none p-3`;
     let style1: string = `grid  bg-[#f9f9f9] hover:scale-110 ease-linear transition duration-200 w-[27rem] border-white shadow-md items-center pl-3 grid-cols-[6%_94%] border-2 ${border}  rounded-lg`;
@@ -22,7 +22,7 @@ const Input: React.FC<types> = ({  img, placeholder, label,img1, type}) => {
                     <img width={30} src={image} alt="" />
                 </label>
                 {
-                    label=="Password"?<input type={type} onChange={(e)=>{
+                    label=="Password"?<input ref={ref} type={type} onChange={(e)=>{
                         if (e.target.value.length>=8) {
                           localStorage.setItem(`${label}`,e.target.value)
                         }
@@ -46,7 +46,7 @@ const Input: React.FC<types> = ({  img, placeholder, label,img1, type}) => {
                             setBorder("border-red-600")
                             setImage(`${img1}`)
                         }
-                    }} id={label} pattern=".{8,}" className={style} required  placeholder={placeholder} />:<input onChange={(e)=>{
+                    }} id={label} pattern=".{8,}" className={style} required  placeholder={placeholder} />:<input ref={ref} onChange={(e)=>{
                          if (e.target.value.length>=8) {
                           localStorage.setItem(`${label}`,e.target.value)
                         }

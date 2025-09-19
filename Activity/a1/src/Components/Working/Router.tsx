@@ -4,7 +4,14 @@ import Main1 from "../Main/Main1";
 import Login from "../Login/Login";
 import Menu from "../Main/Menu";
 import ButtonMenu from "../Buttons/ButtonMenu";
-import { Children } from "react";
+import ButtonApps from "../Buttons/ButtonApps";
+import ButtonPlus from "../Buttons/ButtonPlus";
+import ButtonCalendar from "../Buttons/ButtonCalendar";
+import ButtonFollow from "../Buttons/ButtonFollow";
+import ButtonGallery from "../Buttons/ButtonGallery";
+import ButtonRing from "../Buttons/ButtonRing";
+import ButtonSettings from "../Buttons/ButtonSettings";
+import ButtonVideo from "../Buttons/ButtonVideo";
 import ProductTake from "../Products/ProductTake";
 import Product2 from "../Products/Product2";
 import Product3 from "../Products/Product3";
@@ -22,19 +29,114 @@ const router=createBrowserRouter([
         path:"/Login",element:<Login/>
     },
     {
-        path:"/MainPage",element:<Menu/>,
+        path:"MainPage",element:<Menu/>,
         children:[
-            {path:"/MainPage/Menu",element:<ButtonMenu/>,
+            {path:"Menu",element:<ButtonMenu/>,
                 children:[
-               { path:"/MainPage/Menu/Water",element:<ProductTake/>},
-               { path:"/MainPage/Menu/Food",element:<Product2/>},
-               { path:"/MainPage/Menu/Dumbel",element:<Product3/>},
-               { path:"/MainPage/Menu/Chemical",element:<Product4/>},
-               { path:"/MainPage/Menu/Medicine",element:<Product5/>},
-               { path:"/MainPage/Menu/Calendar",element:<Product6/>},
-               { path:"/MainPage/Menu/BP",element:<Product7/>},
-               { path:"/MainPage/Menu/Diobetic",element:<Product8/>}
-
+               { path:"Water",element:<ProductTake/>},
+               { path:"Food",element:<Product2/>},
+               { path:"Dumbel",element:<Product3/>},
+               { path:"Chemical",element:<Product4/>},
+               { path:"Medicine",element:<Product5/>},
+               { path:"Calendar",element:<Product6/>},
+               { path:"BP",element:<Product7/>},
+               { path:"Diobetic",element:<Product8/>}
+            ]
+            },
+              {path:"Apps",element:<ButtonApps/>,
+                children:[
+               { path:"Water",element:<ProductTake/>},
+               { path:"Food",element:<Product2/>},
+               { path:"Dumbel",element:<Product3/>},
+               { path:"Chemical",element:<Product4/>},
+               { path:"Medicine",element:<Product5/>},
+               { path:"Calendar",element:<Product6/>},
+               { path:"BP",element:<Product7/>},
+               { path:"Diobetic",element:<Product8/>}
+            ]
+            },
+             {path:"Plus",element:<ButtonPlus/>,
+                children:[
+               { path:"Water",element:<ProductTake/>},
+               { path:"Food",element:<Product2/>},
+               { path:"Dumbel",element:<Product3/>},
+               { path:"Chemical",element:<Product4/>},
+               { path:"Medicine",element:<Product5/>},
+               { path:"Calendar",element:<Product6/>},
+               { path:"BP",element:<Product7/>},
+               { path:"Diobetic",element:<Product8/>}
+            ]
+            },
+             {path:"Calendar",element:<ButtonCalendar/>,
+                children:[
+               { path:"Water",element:<ProductTake/>},
+               { path:"Food",element:<Product2/>},
+               { path:"Dumbel",element:<Product3/>},
+               { path:"Chemical",element:<Product4/>},
+               { path:"Medicine",element:<Product5/>},
+               { path:"Calendar",element:<Product6/>},
+               { path:"BP",element:<Product7/>},
+               { path:"Diobetic",element:<Product8/>}
+            ]
+            },
+             {path:"Gallery",element:<ButtonGallery/>,
+                children:[
+               { path:"Water",element:<ProductTake/>},
+               { path:"Food",element:<Product2/>},
+               { path:"Dumbel",element:<Product3/>},
+               { path:"Chemical",element:<Product4/>},
+               { path:"Medicine",element:<Product5/>},
+               { path:"Calendar",element:<Product6/>},
+               { path:"BP",element:<Product7/>},
+               { path:"Diobetic",element:<Product8/>}
+            ]
+            },
+             {path:"Follow",element:<ButtonFollow/>,
+                children:[
+               { path:"Water",element:<ProductTake/>},
+               { path:"Food",element:<Product2/>},
+               { path:"Dumbel",element:<Product3/>},
+               { path:"Chemical",element:<Product4/>},
+               { path:"Medicine",element:<Product5/>},
+               { path:"Calendar",element:<Product6/>},
+               { path:"BP",element:<Product7/>},
+               { path:"Diobetic",element:<Product8/>}
+            ]
+            },
+             {path:"Ring",element:<ButtonRing/>,
+                children:[
+               { path:"Water",element:<ProductTake/>},
+               { path:"Food",element:<Product2/>},
+               { path:"Dumbel",element:<Product3/>},
+               { path:"Chemical",element:<Product4/>},
+               { path:"Medicine",element:<Product5/>},
+               { path:"Calendar",element:<Product6/>},
+               { path:"BP",element:<Product7/>},
+               { path:"Diobetic",element:<Product8/>}
+            ]
+            },
+             {path:"Video",element:<ButtonVideo/>,
+                children:[
+               { path:"Water",element:<ProductTake/>},
+               { path:"Food",element:<Product2/>},
+               { path:"Dumbel",element:<Product3/>},
+               { path:"Chemical",element:<Product4/>},
+               { path:"Medicine",element:<Product5/>},
+               { path:"Calendar",element:<Product6/>},
+               { path:"BP",element:<Product7/>},
+               { path:"Diobetic",element:<Product8/>}
+            ]
+            },
+             {path:"Settings",element:<ButtonSettings/>,
+                children:[
+               { path:"Water",element:<ProductTake/>},
+               { path:"Food",element:<Product2/>},
+               { path:"Dumbel",element:<Product3/>},
+               { path:"Chemical",element:<Product4/>},
+               { path:"Medicine",element:<Product5/>},
+               { path:"Calendar",element:<Product6/>},
+               { path:"BP",element:<Product7/>},
+               { path:"Diobetic",element:<Product8/>}
             ]
             },
             

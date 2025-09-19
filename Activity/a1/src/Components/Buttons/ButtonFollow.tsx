@@ -11,7 +11,7 @@ import Filter from "../../assets/filter.svg";
 import Reducer from "../Reducer/click";
 import { Outlet, useNavigate } from "react-router-dom";
 
-function ButtonMenu() {
+function ButtonFollow() {
     let navigate=useNavigate();
     let color="border-transparent";
     let click={
@@ -26,10 +26,10 @@ function ButtonMenu() {
     }
     let [cl,setCl]=useReducer(Reducer,click);
     let object = [
-        [{ w: 75, img: Notification, text: "Water Intake",work:cl.a }, { w: 60, img: Food, text: "Food Intake",work:cl.b }],
         [{ w: 80, img: dumbel, text: "Exercise",work:cl.c }, { w: 50, img: Chemical, text: "Reports",work:cl.d }],
-        [{ w: 50, img: Medicine, text: "Medicine" ,work:cl.e}, { w: 50, img: Calendar, text: "Appointments",work:cl.f }],
         [{ w: 50, img: bp, text: "Blood Pressure" ,work:cl.g}, { w: 45, img: diobetic, text: "Diabetic",work:cl.h }],
+        [{ w: 50, img: Medicine, text: "Medicine" ,work:cl.e}, { w: 50, img: Calendar, text: "Appointments",work:cl.f }],
+        [{ w: 75, img: Notification, text: "Water Intake",work:cl.a }, { w: 60, img: Food, text: "Food Intake",work:cl.b }],
     ]
     function waterIntake() {
         navigate("Water")
@@ -109,4 +109,4 @@ function ButtonMenu() {
 
     )
 }
-export default ButtonMenu;
+export default ButtonFollow;

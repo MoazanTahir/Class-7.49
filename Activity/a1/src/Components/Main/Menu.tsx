@@ -35,7 +35,31 @@ function Menu() {
         }
     }, [])
     function menuHandler() {
-        navigate("/MainPage/Menu")
+        navigate("Menu")
+    }
+    function appsHandler() {
+        navigate("Apps")
+    }
+    function plusHandler() {
+        navigate("Plus")
+    }
+    function calendarHandler() {
+        navigate("Calendar")
+    }
+    function galleryeHandler() {
+        navigate("Gallery")
+    }
+    function followHandler() {
+        navigate("Follow")
+    }
+    function ringHandler() {
+        navigate("Ring")
+    }
+    function videoHandler() {
+        navigate("Video")
+    }
+    function settingsHandler() {
+        navigate("Settings")
     }
     function exitHandler() {
         localStorage.removeItem("isLoggedIn");
@@ -54,7 +78,15 @@ function Menu() {
                             imgObject.map(im => (
                                 im.check ? <img src={im.img} className="w-[2rem] hover:scale-120 transition ease-linear rounded-full object-cover aspect-square" alt="" /> : <img onClick={()=>{
                                     im.img==menu?menuHandler():
-                                    im.img==exit?exitHandler():null
+                                    im.img==exit?exitHandler():
+                                    im.img==apps?appsHandler():
+                                    im.img==plus?plusHandler():
+                                    im.img==calendar?calendarHandler():
+                                    im.img==gallery?galleryeHandler():
+                                    im.img==follow?followHandler():
+                                    im.img==ring?ringHandler():
+                                    im.img==video?videoHandler():
+                                    im.img==settings?settingsHandler():null
                                 }} src={im.img} className={style} alt="" />
                             ))
                         }
